@@ -9,7 +9,11 @@
 <body>
 <header class="header">
     <div>
-        <img src="assets/images/logo.png" alt="logo" class="logo" loading="lazy">
+        <picture>
+            <source type="image/webp" srcset="assets/images/logo.webp">
+            <source type="image/png" srcset="assets/images/logo.png">
+            <img src="assets/images/logo.png" alt="logo" class="logo" loading="lazy">
+        </picture>
     </div>
     <div class="header-title">
         Marcus Aurelius
@@ -47,7 +51,11 @@
             <li class="nav-li"><a href="sources.html">Sources</a></li>
         </ul>
     </nav>
-    <img src="assets/images/brand.png" alt="brand element" class="logo" loading="lazy">
+    <picture>
+        <source type="image/webp" srcset="assets/images/brand.webp">
+        <source type="image/png" srcset="assets/images/brand.png">
+        <img src="assets/images/brand.png" alt="logo" class="logo" loading="lazy">
+    </picture>
 </footer>
 </body>
 </html>
