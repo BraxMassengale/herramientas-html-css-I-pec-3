@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #EBEFF2;
+}
+
+nav {
+    bottom: 0;
+    display: flex;
+    background: white;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 2em;
+}
+
+.divided {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font: 2em "montserrat";
+}
+
+.nav-li {
+margin-right: 20px;
+padding: 5px;
+}
+
+.nav-li a {
+color: black;
+}
+
+.nav-li:hover {
+background-color: rgba(14, 164, 227, 0.4);
+border-radius: 5px;
+cursor: pointer;
+}
+
+.fictional {
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 600px;
+}
+
+.image {
+    border-radius: 5px;
+    box-shadow: black 1px 1px 5px;
+    margin-bottom: 5px;
+}
+
+.image-default {
+    max-width: 400px;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    margin: 1rem 0 0 1rem;
+}
+
+.header {
+    background-color: #EBEFF2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-family: "Noto Sans Sharada", serif;
+    margin: 1rem 1rem 0 0;
+}
+
+blockquote {
+    font-family: "montserrat", serif;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.clipped {
+    width: 400px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@media only screen and (max-width: 992px) {
+    .divided {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .clipped {
+        width: 300px;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+
+    body {
+        font-size: 2em;
+    }
+
+    .card {
+        min-width: 300px;
+    }
+
+    .image-default {
+        max-width: 300px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        margin-top: 150px;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+@keyframes stretch {
+    0% {
+        transform: scale(.4);
+        border-radius: 30%;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+
